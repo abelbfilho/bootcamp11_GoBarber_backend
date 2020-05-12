@@ -4,8 +4,11 @@ import crypto from 'crypto';
 // import { uuid } from 'uuidv4';
 
 const tmpFolder = path.resolve(__dirname, '..', '..', 'tmp');
+const uplFolder = path.resolve(__dirname, '..', '..', 'tmp', 'uploads');
+
 export default {
-  directory: tmpFolder,
+  tmpFolder,
+  uplFolder,
   storage: multer.diskStorage({
     destination: tmpFolder,
     filename(request, file, callback) {
