@@ -1,22 +1,26 @@
 import AppError from '@shared/errors/AppError';
 import FakeUsersRepository from '@modules/users/repositories/fakes/FakeUsersRepository';
 import FakeHashProvider from '@modules/users/providers/HashProvider/fakes/FakeHashProvider';
+import FakeCacheProvider from '@shared/container/providers/CacheProvider/fakes/FakeCacheProvider';
 import AuthenticateUserService from './AuthenticateUserService';
 import CreateUserService from './CreateUserService';
 
 let fakeUsersRepository: FakeUsersRepository;
 let fakeHashProvider: FakeHashProvider;
+let fakeCacheProvider: FakeCacheProvider;
 
 describe('AuthenticateUser', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
     fakeHashProvider = new FakeHashProvider();
+    fakeCacheProvider = new FakeCacheProvider();
   });
 
   it('should be able to authenticate', async () => {
     const createUser = new CreateUserService(
       fakeUsersRepository,
-      fakeHashProvider
+      fakeHashProvider,
+      fakeCacheProvider
     );
     const authenticateUser = new AuthenticateUserService(
       fakeUsersRepository,
@@ -41,7 +45,8 @@ describe('AuthenticateUser', () => {
   it('should NOT be able to authenticate with an invalid user', async () => {
     const createUser = new CreateUserService(
       fakeUsersRepository,
-      fakeHashProvider
+      fakeHashProvider,
+      fakeCacheProvider
     );
     const authenticateUser = new AuthenticateUserService(
       fakeUsersRepository,
@@ -65,7 +70,8 @@ describe('AuthenticateUser', () => {
   it('should NOT be able to authenticate with an wrong password', async () => {
     const createUser = new CreateUserService(
       fakeUsersRepository,
-      fakeHashProvider
+      fakeHashProvider,
+      fakeCacheProvider
     );
     const authenticateUser = new AuthenticateUserService(
       fakeUsersRepository,
