@@ -16,9 +16,9 @@ import '@shared/container';
 
 const app = express();
 app.use(cors());
-app.use(rateLimiter);
 app.use(express.json());
 app.use('/files', express.static(uploadConfig.uplFolder));
+app.use(rateLimiter);
 app.use(routes);
 
 app.use(errors());
