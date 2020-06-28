@@ -24,10 +24,13 @@
         "prettier"
     ],
     "rules": {
+      "no-underscore-dangle": "off",
       "prettier/prettier": "error",
-      "class-methods-use-this":"off",
-      "no-useless-constructor": "off",
+      "import/prefer-default-export": "off",
+      "camelcase": "off",
+      "class-methods-use-this": "off",
       "@typescript-eslint/camelcase": "off",
+      "no-useless-constructor": "off",
       "@typescript-eslint/no-unused-vars": ["error", {
         "argsIgnorePattern": "_"
       }],
@@ -35,12 +38,12 @@
         "prefixWithI": "always"
       }],
       "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "ts": "never"
-        }
-      ]
+          "error",
+          "ignorePackages",
+          {
+            "ts": "never"
+          }
+        ]
     },
     "settings": {
       "import/resolver": {
