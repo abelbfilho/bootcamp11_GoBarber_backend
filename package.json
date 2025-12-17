@@ -11,16 +11,16 @@
     "test": "jest"
   },
   "dependencies": {
-    "aws-sdk": "^2.675.0",
+    "aws-sdk": "^2.814.0",
     "bcryptjs": "^2.4.3",
     "celebrate": "^12.1.1",
-    "class-transformer": "^0.2.3",
+    "class-transformer": "^0.3.1",
     "cors": "^2.8.5",
     "date-fns": "^2.12.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.3",
     "express-async-errors": "^3.1.1",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "ioredis": "^4.16.3",
     "jsonwebtoken": "^8.5.1",
     "mime": "^2.4.5",
@@ -29,10 +29,10 @@
     "nodemailer": "^6.4.6",
     "pg": "^8.0.2",
     "rate-limiter-flexible": "^2.1.4",
-    "redis": "^3.0.2",
+    "redis": "^3.1.1",
     "reflect-metadata": "^0.1.13",
     "tsyringe": "^4.2.0",
-    "typeorm": "^0.2.24",
+    "typeorm": "^0.2.25",
     "uuidv4": "^6.0.7"
   },
   "devDependencies": {
